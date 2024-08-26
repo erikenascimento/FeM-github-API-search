@@ -1,3 +1,10 @@
 .header {
+    // Flex
     display: flex;
+    justify-content: space-between;
+
+    // for some yet unknown reason there's a margin being applied to the h1, the line bellow removes that
+    &__title {
+        margin: 0;
+    }
 }

@@ -6,7 +6,7 @@ import ThemeSelector from "../ThemeSelector";
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<h1>Devfinder</h1>
+			<h1 className={styles.header__title}>devfinder</h1>
 			<ThemeSelector />
 		</header>
 	);
