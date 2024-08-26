@@ -43,19 +43,13 @@
 
 // Media queries
 @mixin breakpoint-lg {
-	@media (min-width: $breakpoint-lg) {
+	@media (min-width: var(--breakpoint-lg)) {
 		@content;
 	}
 }
 
 @mixin breakpoint-md {
-	@media (min-width: $breakpoint-md) {
-		@content;
-	}
-}
-
-@mixin breakpoint-sm {
-	@media (max-width: $breakpoint-sm) {
+	@media (min-width: var(--breakpoint-md)) {
 		@content;
 	}
 }
@@ -82,7 +76,7 @@ body {
 	font-size: var(--body-font-size);
 	line-height: var(--body-line-height);
 	// Spacing
-	margin: $margin-small;
+	margin: var(--margin-small);
 }
 
 // Typography Styles
