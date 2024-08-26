@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+/* Default Light Mode Colors */
 :root {
-	/* Light Mode Colors */
 	--blue-primary-color: #0079ff;
 	--secondary-color: #697c9a;
 	--accent-color: #4b6a9b;
@@ -33,14 +33,16 @@
 	--body-font-weight: 400;
 }
 
-[data-theme="dark"] {
-	/* Dark Mode Colors */
-	--blue-primary-color: #0079ff;
-	--secondary-color: #141d2f;
-	--accent-color: #1e2a47;
-	--background-color: #141d2f;
-	--surface-color: #1e2a47;
-	--text-color: #ffffff;
+/* Dark Mode Colors */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--blue-primary-color: #0079ff;
+		--secondary-color: #141d2f;
+		--accent-color: #1e2a47;
+		--background-color: #141d2f;
+		--surface-color: #1e2a47;
+		--text-color: #ffffff;
+	}
 }
 
 /* Apply the variables */
