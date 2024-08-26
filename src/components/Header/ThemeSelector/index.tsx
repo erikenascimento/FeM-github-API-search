@@ -3,8 +3,8 @@ import styles from "./ThemeSelector.module.scss";
 // React Hooks
 import { useState } from "react";
 // Custom components
-import IconThemeDark from "../icons/IconTheme/IconThemeDark";
-import IconThemeLight from "../icons/IconTheme/ThemeLight/indext";
+import IconThemeDark from "../../icons/IconTheme/IconThemeDark";
+import IconThemeLight from "../../icons/IconTheme/ThemeLight/indext";
 
 const ThemeSelector: React.FC = () => {
 	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);

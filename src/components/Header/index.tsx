@@ -1,7 +1,7 @@
 // CSS
 import styles from "./Header.module.scss";
 // Custom components
-import ThemeSelector from "../ThemeSelector";
+import ThemeSelector from "./ThemeSelector";
 
 const Header = () => {
 	return (
