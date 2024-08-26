@@ -1,4 +1,8 @@
+// CSS
+import styles from "./ThemeSelector.module.scss";
+// React Hooks
 import { useState } from "react";
+// Custom components
 import IconThemeDark from "../icons/IconTheme/IconThemeDark";
 import IconThemeLight from "../icons/IconTheme/ThemeLight/indext";
 
@@ -15,8 +19,11 @@ const ThemeSelector: React.FC = () => {
 			data-test="theme-selector"
 			onClick={toggleTheme}
 			style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
+			className={styles.themeSelector}
 		>
-			<span data-test="theme-text">{isDarkMode ? "Light" : "Dark"}</span>
+			<span data-test="theme-text" className={styles.themeSelector__text}>
+				{isDarkMode ? "Light" : "Dark"}
+			</span>
 			{isDarkMode ? <IconThemeLight /> : <IconThemeDark />}
 		</div>
 	);
