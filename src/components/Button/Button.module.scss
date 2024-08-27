@@ -1,0 +1,15 @@
+.button {
+    display: inline-block;
+    // Colors
+    background-color: var(--blue-primary-color);
+    color: white;
+    // Format
+    border: none;
+    border-radius: 10px;
+    padding: 12.5px 1rem 12.5px 1rem;
+    // Typography
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 21px;
+}
