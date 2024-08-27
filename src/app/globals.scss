@@ -10,6 +10,7 @@
 	--background-color: #f6f8ff;
 	--surface-color: #fefefe;
 	--text-color: #2b3442;
+
 	// Breakpoints
 	--breakpoint-lg: 1440px;
 	--breakpoint-md: 768px;
@@ -41,29 +42,14 @@
 	--body-font-weight: 400;
 }
 
-// Media queries
-@mixin breakpoint-lg {
-	@media (min-width: var(--breakpoint-lg)) {
-		@content;
-	}
-}
-
-@mixin breakpoint-md {
-	@media (min-width: var(--breakpoint-md)) {
-		@content;
-	}
-}
-
 // Dark Mode Colors
-@media (prefers-color-scheme: dark) {
-	:root {
-		--blue-primary-color: #0079ff;
-		--secondary-color: #141d2f;
-		--accent-color: #1e2a47;
-		--background-color: #141d2f;
-		--surface-color: #1e2a47;
-		--text-color: #ffffff;
-	}
+.dark-theme {
+	--blue-primary-color: #0079ff;
+	--secondary-color: #141d2f;
+	--accent-color: #1e2a47;
+	--background-color: #141d2f;
+	--surface-color: #1e2a47;
+	--text-color: #ffffff;
 }
 
 // Applying the variables
