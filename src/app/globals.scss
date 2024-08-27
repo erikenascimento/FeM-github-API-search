@@ -25,7 +25,7 @@
 
 	--h1-font-size: 26px;
 	--h1-line-height: 38px;
-	--h1-font-weight: 700;
+	--h1-font-weight: 400;
 
 	--h2-font-size: 22px;
 	--h2-line-height: 33px;
@@ -54,6 +54,9 @@
 	--text-color: #ffffff;
 
 	--input-color: var(--text-color);
+
+	//Typography
+	--h1-font-weight: 700;
 }
 
 // Applying the variables
