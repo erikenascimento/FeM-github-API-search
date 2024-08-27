@@ -1,5 +1,6 @@
 .searchBarInput {
     // Styling
+    background: transparent;
     border: none;
     // Dimensioning
     width: 59%; // So it doesn't crush the search icon
@@ -7,10 +8,10 @@
     // Other
     line-height: 2; // To align the text to the middle
     // Typography
-    color: var(--accent-color);
+    color: var(--input-color);
     font-family: var(--font-family);
     font-size: 13px;
     &::placeholder {
-        color: var(--accent-color);
+        color: var(--input-color);
     }
 }

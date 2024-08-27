@@ -11,6 +11,8 @@
 	--surface-color: #fefefe;
 	--text-color: #2b3442;
 
+	--input-color: var(--accent-color);
+
 	// Breakpoints
 	--breakpoint-lg: 1440px;
 	--breakpoint-md: 768px;
@@ -50,6 +52,8 @@
 	--background-color: #141d2f;
 	--surface-color: #1e2a47;
 	--text-color: #ffffff;
+
+	--input-color: var(--text-color);
 }
 
 // Applying the variables
