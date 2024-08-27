@@ -10,8 +10,14 @@ const ThemeSelector: React.FC = () => {
 	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
 	const toggleTheme = () => {
-		setIsDarkMode(!isDarkMode);
-		// Logic to apply theme to the application, e.g., updating a context or class
+		// Check if the body has the dark theme class
+		if (document.body.classList.contains("dark-theme")) {
+			document.body.classList.remove("dark-theme"); // Switch to light theme
+			setIsDarkMode(false);
+		} else {
+			document.body.classList.add("dark-theme"); // Switch to dark theme
+			setIsDarkMode(true);
+		}
 	};
 
 	return (
