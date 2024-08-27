@@ -3,8 +3,12 @@
     display: flex;
     justify-content: space-between;
 
-    // for some yet unknown reason there's a margin being applied to the h1, the line bellow removes that
     &__title {
+        font-weight: normal;
         margin: 0;
     }
+
+    // Spacing
+    margin-top: 31px;
+    margin-bottom: 36px;
 }
