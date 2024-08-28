@@ -6,9 +6,9 @@ const IconX = () => {
 			height="20"
 			viewBox="0 0 512 462.799"
 			preserveAspectRatio="xMidYMid meet"
-			shape-rendering="geometricPrecision"
-			text-rendering="geometricPrecision"
-			image-rendering="optimizeQuality"
+			shapeRendering="geometricPrecision"
+			textRendering="geometricPrecision"
+			imageRendering="optimizeQuality"
 			fillRule="evenodd"
 			clipRule="evenodd"
 		>
