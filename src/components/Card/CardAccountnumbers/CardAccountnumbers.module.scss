@@ -1,0 +1,19 @@
+.cardAccountnumbers {
+    // Grid
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    //Styling
+    background-color: var(--background-color);
+    &__div {
+        // Flex
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & > span {
+            color: var(--themed-text-color);
+            font-size: 11px;
+        }
+    }
+    // Spacing
+    margin-bottom: 24px;
+}
