@@ -1,0 +1,43 @@
+.cardBio {
+    // Flex
+    display: flex;
+    column-gap: 20px;
+    // Dimensioning
+    height: 70px;
+
+    &__figure {
+        &__img {
+            // Dimensioning
+            border-radius: 100%;
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    &__article {
+        &__title {
+            // Typography
+            font-size: var(--h3-font-size);
+            line-height: 24px;
+        }
+
+        &__handle {
+            // Styling
+            color: var(--blue-primary-color);
+            // Spacing
+            margin-bottom: 6px;
+        }
+
+        &__handle,
+        &__time {
+            // Typography
+            font-size: var(--h4-font-size);
+            line-height: 19px;
+        }
+
+        &__time {
+            // Styling
+            color: var(--secondary-color);
+        }
+    }
+}
