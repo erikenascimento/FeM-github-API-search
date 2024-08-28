@@ -1,33 +1,10 @@
-// UserContext.tsx
+// React hooks
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { fetchGitHubUser } from "@/services/githubService"; // Adjust the path as needed
-
-// Define the shape of the user data
-interface IUserData {
-	// To use at CardBio
-	avatar_url: string;
-	name: string;
-	login: string;
-	created_at: Date;
-	// To use at CardDescription
-	bio: string | null;
-	// To use at CardAccountnumbers
-	public_repos: number;
-	followers: number;
-	following: number;
-	// To use at CardAddress
-	location: string | null;
-	blog: string | null;
-	twitter_username: string | null;
-	company: string | null;
-}
-
-// Define context type
-interface IUserContext {
-	userData: IUserData | null;
-	loading: boolean;
-	error: string | null;
-}
+// Services
+import { fetchGitHubUser } from "@/services/githubService";
+// Interfaces
+import IUserData from "@/interfaces/IUserData";
+import IUserContext from "@/interfaces/IUserContext";
 
 // Create the context with default values
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -41,6 +18,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
+		// This will create the default user for the app
 		const fetchDefaultUser = async () => {
 			try {
 				const data = await fetchGitHubUser("erikenascimento");
