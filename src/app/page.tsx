@@ -1,9 +1,8 @@
 "use client";
-// css
-import Card from "@/components/Card";
 // Custom components
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
+import Card from "@/components/Card";
 // Providers
 import { UserProvider } from "@/contexts/UserContext";
 
