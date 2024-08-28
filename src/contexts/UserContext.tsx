@@ -1,12 +1,12 @@
 // React hooks
-import React, { createContext, useContext, useState, useEffect } from "react";
-// Services
-import { fetchGitHubUser } from "@/services/githubService";
+import React, { createContext, useContext, useState, useCallback } from "react";
 // Interfaces
 import IUserData from "@/interfaces/IUserData";
 import IUserContext from "@/interfaces/IUserContext";
+// Services
+import { fetchGitHubUser } from "@/services/fetchGitHubUser";
 
-// Create the context with default values
+// Create the context
 const UserContext = createContext<IUserContext | undefined>(undefined);
 
 // Create a provider component
@@ -14,33 +14,31 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
 	const [userData, setUserData] = useState<IUserData | null>(null);
-	const [loading, setLoading] = useState<boolean>(true);
+	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<string | null>(null);
 
-	useEffect(() => {
-		// This will create the default user for the app
-		const fetchDefaultUser = async () => {
-			try {
-				const data = await fetchGitHubUser("erikenascimento");
-				setUserData(data);
-			} catch (err) {
-				setError("Error fetching default user");
-			} finally {
-				setLoading(false); // inform that the loading is done
-			}
-		};
-
-		fetchDefaultUser();
+	// useCallback will prevent the function to be recalled every render
+	const fetchUser = useCallback(async (username: string) => {
+		setLoading(true);
+		setError(null);
+		try {
+			const data = await fetchGitHubUser(username);
+			setUserData(data);
+		} catch (err) {
+			setError("Error fetching user data");
+		} finally {
+			setLoading(false);
+		}
 	}, []);
 
 	return (
-		<UserContext.Provider value={{ userData, loading, error }}>
+		<UserContext.Provider value={{ userData, loading, error, fetchUser }}>
 			{children}
 		</UserContext.Provider>
 	);
 };
 
-// Custom hook to use the context
+// Custom hook to consume the context
 export const useUser = (): IUserContext => {
 	const context = useContext(UserContext);
 	if (context === undefined) {
