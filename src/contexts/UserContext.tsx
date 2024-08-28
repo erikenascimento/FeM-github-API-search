@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useCallback } from "react";
 import IUserData from "@/interfaces/IUserData";
 import IUserContext from "@/interfaces/IUserContext";
 // Services
-import { fetchGitHubUser } from "@/services/fetchGitHubUser";
+import { useFetchUser } from "@/hooks/UseFetchUser";
 
 // Create the context
 const UserContext = createContext<IUserContext | undefined>(undefined);
@@ -13,23 +13,8 @@ const UserContext = createContext<IUserContext | undefined>(undefined);
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
-	const [userData, setUserData] = useState<IUserData | null>(null);
-	const [loading, setLoading] = useState<boolean>(false);
-	const [error, setError] = useState<string | null>(null);
-
-	// useCallback will prevent the function to be recalled every render
-	const fetchUser = useCallback(async (username: string) => {
-		setLoading(true);
-		setError(null);
-		try {
-			const data = await fetchGitHubUser(username);
-			setUserData(data);
-		} catch (err) {
-			setError("Error fetching user data");
-		} finally {
-			setLoading(false);
-		}
-	}, []);
+	// This will fetch the user and keep it inside the context
+	const { userData, loading, error, fetchUser } = useFetchUser();
 
 	return (
 		<UserContext.Provider value={{ userData, loading, error, fetchUser }}>
