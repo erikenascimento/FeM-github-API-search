@@ -1,7 +1,7 @@
 // Importing the font
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-// Light Mode Colors
+// Light Mode Styles
 :root {
 	// Colors
 	--blue-primary-color: #0079ff;
@@ -44,7 +44,7 @@
 	--body-font-weight: 400;
 }
 
-// Dark Mode Colors
+// Dark Mode Styles
 .dark-theme {
 	--blue-primary-color: #0079ff;
 	--secondary-color: #141d2f;
@@ -95,6 +95,11 @@ h4 {
 	font-size: var(--h4-font-size);
 	line-height: var(--h4-line-height);
 	font-weight: var(--h4-font-weight);
+}
+
+p {
+	color: var(--accent-color);
+	font-size: 13px;
 }
 
 h1,
