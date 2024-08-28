@@ -1,10 +1,11 @@
+// css
 import styles from "./SearchBarInput.module.scss";
 
 const SearchBarInput = () => {
 	return (
 		<input
-			name="SearchArea"
-			id="SearchArea"
+			name="SearchInput"
+			id="SearchInput"
 			className={styles.searchBarInput}
 			placeholder="Search GitHub username…"
 		></input>
