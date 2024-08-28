@@ -1,3 +1,4 @@
+// css
 import styles from "./Button.module.scss";
 
 const Button = ({ children }: { children: string }) => {
