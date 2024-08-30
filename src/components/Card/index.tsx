@@ -19,6 +19,7 @@ const Card: React.FC = () => {
 	useEffect(() => {
 		fetchUser("erikenascimento");
 	}, [fetchUser]);
+
 	return (
 		<section className={styles.card}>
 			<CardBio />
