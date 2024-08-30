@@ -1,7 +1,6 @@
 // React hooks
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useContext } from "react";
 // Interfaces
-import IUserData from "@/interfaces/IUserData";
 import IUserContext from "@/interfaces/IUserContext";
 // Services
 import { useFetchUser } from "@/hooks/UseFetchUser";
