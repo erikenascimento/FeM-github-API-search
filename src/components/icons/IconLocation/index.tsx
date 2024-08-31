@@ -1,3 +1,5 @@
+import React from "react";
+
 const IconLocation = () => {
 	return (
 		<svg height="20" width="14" xmlns="http://www.w3.org/2000/svg">

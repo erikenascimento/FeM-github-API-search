@@ -1,3 +1,5 @@
+import React from "react";
+
 // css
 import { useState } from "react";
 // React hooks

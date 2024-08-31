@@ -1,3 +1,4 @@
+import React from "react"; // Reacts needs to be imported because of jest
 // CSS
 import styles from "./ThemeSelector.module.scss";
 // React Hooks
@@ -22,12 +23,12 @@ const ThemeSelector: React.FC = () => {
 
 	return (
 		<div
-			data-test="theme-selector"
+			data-testid="theme-selector"
 			onClick={toggleTheme}
 			style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
 			className={styles.themeSelector}
 		>
-			<span data-test="theme-text" className={styles.themeSelector__text}>
+			<span data-testid="theme-text" className={styles.themeSelector__text}>
 				{isDarkMode ? "Light" : "Dark"}
 			</span>
 			{isDarkMode ? <IconThemeLight /> : <IconThemeDark />}

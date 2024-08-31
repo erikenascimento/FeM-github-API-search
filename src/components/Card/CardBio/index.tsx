@@ -1,3 +1,4 @@
+import React from "react";
 // css
 import styles from "./CardBio.module.scss";
 // React hooks

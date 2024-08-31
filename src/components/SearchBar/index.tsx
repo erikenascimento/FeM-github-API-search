@@ -1,4 +1,6 @@
 // css
+import React from "react";
+
 import styles from "./SearchBar.module.scss";
 // Custom components
 import Button from "../Button";

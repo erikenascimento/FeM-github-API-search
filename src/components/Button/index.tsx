@@ -1,3 +1,4 @@
+import React from "react";
 // css
 import styles from "./Button.module.scss";
 

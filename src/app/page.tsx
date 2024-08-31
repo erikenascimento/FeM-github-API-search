@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 // Custom components
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";

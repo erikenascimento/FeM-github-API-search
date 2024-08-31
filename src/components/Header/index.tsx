@@ -1,3 +1,4 @@
+import React from "react";
 // CSS
 import styles from "./Header.module.scss";
 // Custom components
