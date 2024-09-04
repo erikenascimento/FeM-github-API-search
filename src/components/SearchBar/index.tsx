@@ -1,6 +1,5 @@
-// css
 import React from "react";
-
+// css
 import styles from "./SearchBar.module.scss";
 // Custom components
 import Button from "../Button";
@@ -25,8 +24,10 @@ const SearchBar = () => {
 
 	return (
 		<section className={styles.searchBar}>
-			<IconSearch />
-			<SearchBarInput setUsername={setUsername} />
+			<div className={styles.searchBar__left}>
+				<IconSearch />
+				<SearchBarInput setUsername={setUsername} />
+			</div>
 			<Button onClick={handleSearch}>Search</Button>
 		</section>
 	);
