@@ -19,4 +19,10 @@
             opacity: 50%;
         }
     }
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: wrap;
+        height: 66px;
+        column-gap: 64px;
+    }
 }
