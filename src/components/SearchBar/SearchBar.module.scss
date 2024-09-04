@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 0.5rem;
     // Styling
     background-color: var(--surface-color);
     border-radius: 10px;
@@ -12,4 +11,24 @@
     padding: 7px;
     // Spacing
     margin-bottom: 1rem;
+
+    &__left {
+        // Flex
+        display: flex;
+        column-gap: 0.5rem;
+        padding-left: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+        &__left {
+            // Flex
+            display: flex;
+            column-gap: 24px;
+
+            & > :first-child {
+                // Aligning the icon
+                margin-top: 6px;
+            }
+        }
+    }
 }

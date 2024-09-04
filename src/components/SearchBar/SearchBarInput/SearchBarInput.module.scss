@@ -3,7 +3,6 @@
     background: transparent;
     border: none;
     // Dimensioning
-    width: 59%; // So it doesn't crush the search icon
     padding: 0; // Removes default 2px padding
     // Other
     line-height: 2; // To align the text to the middle
@@ -11,7 +10,15 @@
     color: var(--themed-text-color);
     font-family: var(--font-family);
     font-size: 13px;
+
+    // Increasing the width to adapt to the tablet layout
+    width: 254px;
+
     &::placeholder {
         color: var(--input-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
     }
 }
