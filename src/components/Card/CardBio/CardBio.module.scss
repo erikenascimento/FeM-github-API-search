@@ -2,8 +2,6 @@
     // Flex
     display: flex;
     column-gap: 20px;
-    // Dimensioning
-    height: 70px;
     // Spacing
     margin-bottom: 33px;
 
@@ -40,6 +38,38 @@
         &__time {
             // Styling
             color: var(--themed-text-color);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        column-gap: 40px;
+
+        &__figure {
+            &__img {
+                height: 117px;
+                width: 117px;
+            }
+        }
+
+        &__article {
+            &__title {
+                // Typography
+                font-size: var(--h1-font-size);
+                // Spacing
+                margin-bottom: 12px;
+                margin-top: 12px;
+            }
+
+            &__handle {
+                // Typography
+                font-size: 16px;
+                // Spacing
+                margin-bottom: 12px;
+            }
+
+            &__time {
+                font-size: 15px;
+            }
         }
     }
 }
