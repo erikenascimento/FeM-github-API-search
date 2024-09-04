@@ -13,12 +13,9 @@
 
 	--themed-text-color: var(--accent-color);
 
-	// Breakpoints
-	--breakpoint-lg: 1440px;
-	--breakpoint-md: 768px;
-
 	// Margins
 	--margin-small: 24px;
+	--margin-medium: 97px;
 
 	// Typography
 	--font-family: "Space Mono", monospace;
@@ -43,6 +40,10 @@
 	--body-line-height: 25px;
 	--body-font-weight: 400;
 }
+
+// Breakpoints
+$breakpoint-lg: 1440px;
+$breakpoint-md: 768px;
 
 // Dark Mode Styles
 .dark-theme {
@@ -116,4 +117,10 @@ h3,
 h4,
 figure {
 	margin: 0;
+}
+
+@media screen and (min-width: $breakpoint-md) {
+	body {
+		margin: var(--margin-medium);
+	}
 }
