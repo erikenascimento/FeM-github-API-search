@@ -4,6 +4,8 @@
     grid-template-columns: repeat(3, 1fr);
     //Styling
     background-color: var(--background-color);
+    // Format
+    border-radius: 10px;
     &__div {
         // Flex
         display: flex;
@@ -16,4 +18,21 @@
     }
     // Spacing
     margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        &__div {
+            align-items: flex-start;
+            padding: 16px 32px 18px 32px;
+            & > span {
+                // Typography
+                font-size: 13px;
+                // Spaciung
+                margin-bottom: 4px;
+            }
+
+            & > data {
+                font-size: 23px;
+            }
+        }
+    }
 }
