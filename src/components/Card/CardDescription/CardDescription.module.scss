@@ -1,3 +1,10 @@
 .cardDescription {
     margin-bottom: 23px;
+
+    @media screen and (min-width: 768px) {
+        // Typography
+        font-size: 15px;
+        // Spacing
+        margin-bottom: 32px;
+    }
 }

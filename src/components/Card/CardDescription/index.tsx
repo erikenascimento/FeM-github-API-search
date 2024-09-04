@@ -1,8 +1,8 @@
 import React from "react";
-
-// Css
-import { useUser } from "@/contexts/UserContext";
+// css
 import styles from "./CardDescription.module.scss";
+// React hooks
+import { useUser } from "@/contexts/UserContext";
 
 const CardDrescription = () => {
 	const { userData } = useUser();
