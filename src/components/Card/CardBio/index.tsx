@@ -9,7 +9,6 @@ import { formatDate } from "@/utils/dateUtils";
 const CardBio = () => {
 	const { userData } = useUser();
 
-	// The app work as intended despite typescript not coperating here
 	const joinedDate = formatDate(userData?.created_at);
 
 	return (
