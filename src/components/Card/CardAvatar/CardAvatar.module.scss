@@ -1,0 +1,15 @@
+.cardAvatar {
+    &__img {
+        // Dimensioning
+        border-radius: 100%;
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+    }
+
+    @media screen and (min-width: 768px) {
+        &__img {
+            height: var(--avatar-size-md);
+            width: var(--avatar-size-md);
+        }
+    }
+}

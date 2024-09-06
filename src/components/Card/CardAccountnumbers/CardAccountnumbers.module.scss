@@ -16,8 +16,6 @@
             font-size: 11px;
         }
     }
-    // Spacing
-    margin-bottom: 24px;
 
     @media screen and (min-width: 768px) {
         &__div {
@@ -34,5 +32,10 @@
                 font-size: 23px;
             }
         }
+    }
+
+    @media screen and (min-width: 1440px) {
+        // This is a workaround for the grid in the Card compoennt
+        margin-top: 20px;
     }
 }

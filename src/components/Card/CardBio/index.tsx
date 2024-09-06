@@ -13,29 +13,18 @@ const CardBio = () => {
 	const joinedDate = formatDate(userData?.created_at);
 
 	return (
-		<section className={styles.cardBio}>
-			<figure className={styles.cardBio__figure}>
-				<img
-					src={userData?.avatar_url || "/profile-pic.jpg"}
-					alt={`${userData?.name || "User"} profile picture`}
-					className={styles.cardBio__figure__img}
-				/>
-			</figure>
-			<article className={styles.cardBio__article}>
-				<h2 className={styles.cardBio__article__title}>
-					{userData?.name || "User Name"}
-				</h2>
-				<h3 className={styles.cardBio__article__handle}>
-					@{userData?.login || "userHandle"}
-				</h3>
-				<time className={styles.cardBio__article__time}>
-					Joined{" "}
-					{typeof joinedDate === "string"
-						? joinedDate
-						: `${joinedDate.day} ${joinedDate.month} ${joinedDate.year}`}
-				</time>
-			</article>
-		</section>
+		<article className={styles.cardBio}>
+			<h2 className={styles.cardBio__title}>{userData?.name || "User Name"}</h2>
+			<h3 className={styles.cardBio__handle}>
+				@{userData?.login || "userHandle"}
+			</h3>
+			<time className={styles.cardBio__time}>
+				Joined{" "}
+				{typeof joinedDate === "string"
+					? joinedDate
+					: `${joinedDate.day} ${joinedDate.month} ${joinedDate.year}`}
+			</time>
+		</article>
 	);
 };
 

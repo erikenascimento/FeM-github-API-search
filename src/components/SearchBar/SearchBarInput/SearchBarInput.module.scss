@@ -11,14 +11,14 @@
     font-family: var(--font-family);
     font-size: 13px;
 
-    // Increasing the width to adapt to the tablet layout
-    width: 254px;
-
     &::placeholder {
         color: var(--input-color);
     }
 
     @media screen and (min-width: 768px) {
+        // Typography
         font-size: 18px;
+        // Increasing the width to adapt to the tablet layout
+        width: 254px;
     }
 }

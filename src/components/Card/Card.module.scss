@@ -1,13 +1,54 @@
 .card {
+    // Grid
+    display: grid;
+    column-gap: 20px;
+    row-gap: 24px;
+    grid-template-columns: var(--avatar-size) auto;
+    grid-template-rows: var(--avatar-size) auto;
+    grid-auto-rows: auto;
+    // This will target the grid for the elements after the
+    // CardAvatar and CardBio
+    & > :nth-child(n + 3) {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
     // Dimensioning
     border-radius: 10px;
-    display: block;
     padding: 32px 24px 48px 24px;
     // Styling
     background-color: var(--surface-color);
     box-shadow: 0 6px 32px rgba(0, 0, 0, 0.2);
 
     @media screen and (min-width: 768px) {
+        // Grid
+        column-gap: 40px;
+        row-gap: 30px;
+        grid-template-columns: var(--avatar-size-md) auto;
+        grid-template-rows: var(--avatar-size-md) auto;
+
         padding: 40px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        column-gap: 38px;
+        padding: 48px;
+
+        // Will move the CardDescription content
+        & > :nth-child(3),
+        & > :nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        & > :nth-child(3) {
+            position: relative;
+            top: 70px;
+        }
+
+        // Will display the other elements as they should
+        & > :nth-child(n + 4) {
+            grid-column: 2 / 3;
+            grid-row: auto;
+        }
     }
 }

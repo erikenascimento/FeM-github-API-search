@@ -1,5 +1,5 @@
 import React from "react";
-// Css
+// css
 import styles from "./Card.module.scss";
 // Context
 import { useUser } from "@/contexts/UserContext";
@@ -10,7 +10,7 @@ import CardAccountnumbers from "./CardAccountnumbers";
 import CardAddress from "./CardAddress";
 import CardBio from "./CardBio";
 import CardDrescription from "./CardDescription";
-// Services
+import CardAvatar from "./CardAvatar";
 
 const Card: React.FC = () => {
 	// This will fetch the data for "erikenascimento"
@@ -23,6 +23,7 @@ const Card: React.FC = () => {
 
 	return (
 		<section className={styles.card}>
+			<CardAvatar />
 			<CardBio />
 			<CardDrescription />
 			<CardAccountnumbers />
