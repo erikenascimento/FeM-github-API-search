@@ -16,6 +16,7 @@
 	// Margins
 	--margin-small: 24px;
 	--margin-medium: 97px;
+	--margin-large: 355px;
 
 	// Typography
 	--font-family: "Space Mono", monospace;
@@ -122,5 +123,14 @@ figure {
 @media screen and (min-width: $breakpoint-md) {
 	body {
 		margin: var(--margin-medium);
+	}
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+	body {
+		margin-top: 10vh;
+		margin-left: var(--margin-large);
+		margin-right: var(--margin-large);
+		margin-bottom: 10vh;
 	}
 }
