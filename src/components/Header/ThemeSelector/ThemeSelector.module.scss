@@ -4,10 +4,26 @@
     column-gap: 1rem;
 
     &__text {
+        // Styling
+        color: var(--themed-text-color);
         // Typography
         font-size: 13px;
         font-weight: bold;
         letter-spacing: 2.5px;
         text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 1440px) {
+        &:hover {
+            cursor: pointer;
+
+            .themeSelector__text {
+                color: var(--theme-hover);
+            }
+
+            svg {
+                fill: var(--theme-hover);
+            }
+        }
     }
 }

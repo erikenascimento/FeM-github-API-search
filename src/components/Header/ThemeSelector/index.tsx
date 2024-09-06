@@ -1,5 +1,5 @@
 import React from "react"; // Reacts needs to be imported because of jest
-// CSS
+// css
 import styles from "./ThemeSelector.module.scss";
 // React Hooks
 import { useState } from "react";

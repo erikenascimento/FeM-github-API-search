@@ -1,0 +1,8 @@
+.iconThemeLight {
+    fill: #fff;
+
+    // This hover won't really work here, it's just for reference
+    &:hover {
+        fill: var(--themed-text-color);
+    }
+}
