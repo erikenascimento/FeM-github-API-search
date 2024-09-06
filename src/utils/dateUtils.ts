@@ -5,7 +5,7 @@ export interface IFormattedDate {
 }
 
 export const formatDate = (
-	dateString: string | null | undefined
+	dateString: string | null | undefined | Date
 ): IFormattedDate | string => {
 	if (!dateString) {
 		return "Date";
