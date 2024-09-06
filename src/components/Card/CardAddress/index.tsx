@@ -1,5 +1,5 @@
 import React from "react";
-// Css
+// css
 import styles from "./CardAddress.module.scss";
 // Custom components
 import IconLocation from "@/components/icons/IconLocation";
@@ -17,9 +17,19 @@ const CardAddress = () => {
 	const getTextColorStyle = (data: string | null | undefined) => {
 		return data ? { color: "var(--themed-text-color)", opacity: "100%" } : {};
 	};
+	const getLinkStyle = (data: string | null | undefined) => {
+		return data
+			? {
+					color: "var(--themed-text-color)",
+					opacity: "100%",
+					cursor: "pointer",
+					textDecoration: "underline",
+			  }
+			: {};
+	};
 
 	return (
-		<section className={styles.cardAddress}>
+		<address className={styles.cardAddress}>
 			<div className={styles.cardAddress__div}>
 				<IconLocation />
 				<span
@@ -32,7 +42,7 @@ const CardAddress = () => {
 			<div className={styles.cardAddress__div}>
 				<IconLink />
 				<span
-					className={styles.cardAddress__div__text}
+					className={`${styles.cardAddress__div__text} ${styles.hover}`}
 					style={getTextColorStyle(userData?.blog)}
 				>
 					{userData?.blog || "Not Available"}
@@ -56,7 +66,7 @@ const CardAddress = () => {
 					{userData?.company || "Not Available"}
 				</span>
 			</div>
-		</section>
+		</address>
 	);
 };
 

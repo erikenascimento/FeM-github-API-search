@@ -4,6 +4,9 @@
     row-gap: 16px;
     flex-direction: column;
 
+    // Removing the italic from the address tag
+    font-style: normal;
+
     &__div {
         // Flex
         display: flex;
@@ -24,5 +27,12 @@
         flex-wrap: wrap;
         height: 66px;
         column-gap: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
