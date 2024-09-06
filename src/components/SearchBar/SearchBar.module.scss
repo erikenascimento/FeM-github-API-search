@@ -19,6 +19,10 @@
         padding-left: 8px;
     }
 
+    &__right__noResults {
+        display: none;
+    }
+
     @media screen and (min-width: 768px) {
         padding: 9px;
         &__left {
@@ -35,5 +39,20 @@
 
     @media screen and (min-width: 1440px) {
         padding: 9.5px;
+
+        &__right {
+            // Flex
+            display: flex;
+            column-gap: 24px;
+            align-items: center;
+            &__noResults {
+                display: inline-block;
+                // Style
+                color: rgb(247, 70, 70);
+                // Typography
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
     }
 }
