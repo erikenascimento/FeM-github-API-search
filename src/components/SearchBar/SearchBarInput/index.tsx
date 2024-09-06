@@ -27,6 +27,7 @@ const SearchBarInput = ({
 			name="SearchInput"
 			id="SearchInput"
 			className={styles.searchBarInput}
+			data-testid="searchInput"
 			placeholder="Search GitHub username…"
 			value={inputValue}
 			// This will call handleChange whenever the input changes

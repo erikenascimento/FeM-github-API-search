@@ -9,7 +9,11 @@ interface IButtonProps {
 
 const Button: React.FC<IButtonProps> = ({ children, onClick }) => {
 	return (
-		<button className={styles.button} onClick={onClick}>
+		<button
+			className={styles.button}
+			onClick={onClick}
+			data-testid="searchButton"
+		>
 			{children}
 		</button>
 	);

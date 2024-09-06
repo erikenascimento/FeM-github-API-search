@@ -30,7 +30,7 @@ const SearchBar = () => {
 			</div>
 			<div className={styles.searchBar__right}>
 				{/* Conditionally display 'No results' if there's an error and no user data */}
-				{error && userData?.login === "erikenascimento" && (
+				{error && (
 					<span
 						className={styles.searchBar__right__noResults}
 						data-testid="noResults"
